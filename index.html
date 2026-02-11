@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  color:white;
+}
+
+header{
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 10%;
+  background:rgba(15,23,42,0.9);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+header h2{
+  color:#38bdf8;
+}
+
+nav a{
+  margin-left:20px;
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#38bdf8;
+}
+
+section{
+  padding:100px 10%;
+}
+
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.hero-text{
+  max-width:600px;
+}
+
+.hero-text h1{
+  font-size:48px;
+}
+
+.hero-text span{
+  color:#38bdf8;
+}
+
+.hero-text p{
+  margin:20px 0;
+  color:#cbd5e1;
+}
+
+.btn{
+  display:inline-block;
+  padding:10px 25px;
+  background:#38bdf8;
+  color:black;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#0ea5e9;
+}
+
+.profile-img{
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid #38bdf8;
+  box-shadow:0 0 40px #38bdf8;
+}
+
+/* Section Titles */
+.section-title{
+  font-size:32px;
+  color:#38bdf8;
+  margin-bottom:30px;
+}
+
+/* Skills */
+.skill{
+  margin-bottom:20px;
+}
+
+.skill-name{
+  margin-bottom:5px;
+}
+
+.skill-bar{
+  height:8px;
+  background:#334155;
+  border-radius:10px;
+}
+
+.skill-fill{
+  height:8px;
+  background:#38bdf8;
+  border-radius:10px;
+  width:0;
+  transition:2s;
+}
+
+/* Projects */
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.project-card{
+  background:#1e293b;
+  padding:20px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.project-card:hover{
+  transform:translateY(-10px);
+  background:#334155;
+}
+
+/* Experience */
+.timeline{
+  border-left:3px solid #38bdf8;
+  padding-left:20px;
+}
+
+.timeline-item{
+  margin-bottom:30px;
+}
+
+/* Contact */
+.contact input,
+.contact textarea{
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+  border-radius:10px;
+  border:none;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#1e293b;
+  margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>YourName</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Hello, I'm <span>Your Name</span></h1>
+    <p>Backend Developer | Java | Problem Solver | Tech Enthusiast</p>
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+  </div>
+  <img src="profile.jpg" class="profile-img" alt="Profile Picture">
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skill">
+    <div class="skill-name">Java</div>
+    <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-name">DSA</div>
+    <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-name">Spring Boot</div>
+    <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-name">PostgreSQL</div>
+    <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="project-grid">
+
+    <div class="project-card">
+      <h3>AI Powered Backend System</h3>
+      <p>Built REST APIs with Java & Spring Boot integrated with ML model.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>E-Commerce Backend</h3>
+      <p>Secure authentication, payment integration, optimized DB queries.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>IoT Safety Monitoring</h3>
+      <p>ESP32 based multi-sensor monitoring with real-time alerts.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2 class="section-title">Experience</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <h3>Backend Developer Intern</h3>
+      <p>Developed scalable APIs and optimized database queries improving performance by 30%.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Open Source Contributor</h3>
+      <p>Contributed to backend modules and fixed production-level bugs.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2 class="section-title">Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="4" placeholder="Message"></textarea>
+    <button class="btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Your Name | Built with Focus</p>
+</footer>
+
+<script>
+// Animate skill bars
+window.addEventListener("scroll", function(){
+  document.querySelectorAll(".skill-fill").forEach(function(bar){
+    let position = bar.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight;
+    if(position < screenPosition){
+      bar.style.width = bar.getAttribute("data-width");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
